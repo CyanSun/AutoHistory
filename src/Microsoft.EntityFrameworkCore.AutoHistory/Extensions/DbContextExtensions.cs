@@ -23,10 +23,12 @@ namespace Microsoft.EntityFrameworkCore
             NullValueHandling = NullValueHandling.Ignore
         });
 
+        
         /// <summary>
         /// Ensures the automatic history.
         /// </summary>
         /// <param name="context">The context.</param>
+        /// <param name="userId">The user id.</param>
         public static void EnsureAutoHistory(this DbContext context, int userId)
         {
             // Must ToArray() here for excluding the AutoHistory model.
