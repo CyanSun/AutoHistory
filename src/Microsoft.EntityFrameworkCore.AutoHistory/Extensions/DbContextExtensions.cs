@@ -27,7 +27,7 @@ namespace Microsoft.EntityFrameworkCore
         /// Ensures the automatic history.
         /// </summary>
         /// <param name="context">The context.</param>
-        public static void EnsureAutoHistory(this DbContext context)
+        public static void EnsureAutoHistory(this DbContext context, int userId)
         {
             // Must ToArray() here for excluding the AutoHistory model.
             // Currently, only support Modified and Deleted entity.
